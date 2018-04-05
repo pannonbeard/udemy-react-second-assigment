@@ -1,6 +1,6 @@
 import React from 'react'
 
 const validation = ({textLength}) =>
-  <div>{textLeng}</div>
+  <p>{textLength}</p>
 
 export default validation
