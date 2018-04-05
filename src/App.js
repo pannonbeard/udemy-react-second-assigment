@@ -14,15 +14,20 @@ class App extends Component {
     this.setState({ textLength, text })
   }
 
-  deleteChar = (e, index) => 
+  deleteChar = (e, index) => {
+    const textArray = this.state.text.split('')
+    textArray.splice(index, 1)
+    const text = textArray.join('')
+    this.setState({ text })
+  }
 
   render() {
     const charList = this.state.text.split('')
-    const characters = charList.map( (c, index) => <CharComponent letter={c} key={index} />)
+    const characters = charList.map( (c, index) => <CharComponent letter={c} key={index} click={(e) => this.deleteChar(e, index)} />)
 
     return (
       <div className="App">
-        <input onChange={this.changeListener}/>
+        <input onChange={this.changeListener} value={this.state.text}/>
         <Validation textLength={this.state.textLength} />
         {characters}
       </div>
