@@ -5,12 +5,13 @@ import CharComponent from './CharComponent/CharComponent'
 
 class App extends Component {
   state={
+    text: '',
     textLength: 0
   }
   changeListener = (e) => {
-    const string = e.target.value
+    const text = e.target.value
     const textLength = string.length
-    this.setState({ textLength })
+    this.setState({ textLength, text })
   }
 
   render() {

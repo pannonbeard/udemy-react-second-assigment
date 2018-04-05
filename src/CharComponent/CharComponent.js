@@ -1,6 +1,6 @@
 import React from 'react'
 
-const charComponent = () =>{
+const charComponent = ({letter}) =>{
   const style = {
     display: 'inline-block',
     padding: '16px',
@@ -9,7 +9,7 @@ const charComponent = () =>{
     border: '1px solid black'
   }
   return(
-    <div style={style}></div>
+    <div style={style}>{letter}</div>
   )
 }
 
