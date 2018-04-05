@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Validation from './Validation/Validation'
 
 class App extends Component {
   state={
