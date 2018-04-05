@@ -1,12 +1,7 @@
 import React from 'react'
 
 const validation = ({textLength}) =>{
-  let valid = null
-  if(textLength < 5){
-    valid = 'Text too short'
-  }else{
-    valid = 'Text long enough'
-  }
+  const valid = textLength < 5 ? 'Text too short' : 'Text long enough'
   return(
     <p>{valid}</p>
   )
