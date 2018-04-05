@@ -10,16 +10,19 @@ class App extends Component {
   }
   changeListener = (e) => {
     const text = e.target.value
-    const textLength = string.length
+    const textLength = text.length
     this.setState({ textLength, text })
   }
 
   render() {
+    const charList = this.state.text.split('')
+    const characters = charList.map( (c, index) => <CharComponent letter={c} key={index} />)
+
     return (
       <div className="App">
         <input onChange={this.changeListener}/>
         <Validation textLength={this.state.textLength} />
-        <CharComponent />
+        {characters}
       </div>
     );
   }
