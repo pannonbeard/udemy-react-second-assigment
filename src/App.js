@@ -14,6 +14,8 @@ class App extends Component {
     this.setState({ textLength, text })
   }
 
+  deleteChar = (e, index) => 
+
   render() {
     const charList = this.state.text.split('')
     const characters = charList.map( (c, index) => <CharComponent letter={c} key={index} />)
