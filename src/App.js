@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Validation from './Validation/Validation'
+import CharComponent from './CharComponent/CharComponent'
 
 class App extends Component {
   state={
@@ -18,6 +18,7 @@ class App extends Component {
       <div className="App">
         <input onChange={this.changeListener}/>
         <Validation textLength={this.state.textLength} />
+        <CharComponent />
       </div>
     );
   }
